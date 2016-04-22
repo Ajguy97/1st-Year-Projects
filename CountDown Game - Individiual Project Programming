@@ -1,0 +1,166 @@
+#include "stdafx.h"
+#include <stdio.h>
+#include "string.h"
+#include <time.h>
+#include <stdlib.h>
+
+
+int countCharOccurence(char *string, char c);
+int getOption();
+int playGame();
+char rand_vowel();
+char rand_const();
+
+int nwords = 0;
+char dictionary[80000][20];
+
+void main(void)
+{
+	FILE *fptr;
+	char fileName[] = "F:\\webster.txt";
+	int option = 0;
+
+	fptr = fopen(fileName, "r");
+
+	if (fptr == NULL)
+	{
+		printf("File could not be opened !!\n");
+		return;
+	}
+	else
+	{
+		while (!feof(fptr))
+		{
+
+			fscanf(fptr, "%s\n", dictionary[nwords]);
+			nwords++;
+		}
+		fclose(fptr);
+	}
+	puts("--------------------------------------------------------");
+	puts("COUNTDOWN GAME - ANDRE GODINEZ - INDIVIDUAL PROJECT\n");
+	puts("--------------------------------------------------------");
+	option = getOption();
+	while (option != 0)
+	{
+		if (option == 1) playGame();
+		if (option == 0) return;
+		option = getOption();
+	}
+}
+
+int getOption()
+{
+	int option = 0;
+	puts("Options: 1 = Play Game , 2 = Exit Game");
+	fflush(stdin);
+	scanf("%d", &option);
+	return option;
+}
+
+char rand_vowel() {
+	srand(time(NULL));
+	return "aeiou"[rand() % 5];
+}
+char rand_const() {
+	srand(time(NULL));
+	return "bcdfghjklmnpqrstvwxyz"[rand() % 21];
+}
+
+int playGame()
+{
+	char usertemp[20];
+	char temp[20];
+	char vowel[20];
+	char consonant[20];
+	int max = 0;
+	int numMatches = 0;
+	int highestMatch = 0;
+	int i = 0, j = 0, len = 0;
+	int tempCount = 0, wordCount = 0;
+	int input = 0;
+	puts("--------------------------------------------------------");
+	puts("\n\nOptions: 1 = Vowel, 2 = Consonant");
+	
+	for (i = 0; i < 20; i++) {
+		scanf("\n%d", &input);
+
+		switch (input) {
+
+		case 1:
+			vowel[i] = rand_vowel();
+			temp[i] = vowel[i];
+			printf("------>%c\n", temp[i]);
+			break;
+		case 2:
+			consonant[i] = rand_const();
+			temp[i] = consonant[i];
+			printf("------>%c\n", temp[i]);
+			break;
+
+		default:
+			puts("Invalid option\n");
+			i--;
+		}
+	}
+
+	printf("Your Letters are \"%c %c %c %c %c %c %c %c %c %c %c %c %c %c %c %c %c %c %c %c \" \n", temp[0], temp[1], temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9], temp[10], temp[11], temp[12], temp[13], temp[14], temp[15], temp[16], temp[17], temp[18], temp[19]);
+
+	puts("Make a word out of these letters.(Can't repeat letters.)");
+	puts("--------------------------------------------------------");
+	scanf("%s", usertemp);
+	puts("--------------------------------------------------------");
+	puts("\Longest words are at the end of the list:");
+	puts("--------------------------------------------------------");
+
+	for (i = 0; i<nwords; i++)
+	{
+		numMatches = 0;
+		len = strlen(dictionary[i]);
+
+		for (j = 0; j<len; j++)
+		{
+			tempCount = 0;
+			wordCount = 0;
+			tempCount = countCharOccurence(temp, dictionary[i][j]);
+			wordCount = countCharOccurence(dictionary[i], dictionary[i][j]);
+
+			// every letter gets counted once => if 3 'a's in each word, then +1 for each a
+			// => a full match on an n-letter word gets a score of 8
+			if ((tempCount > 0) && (tempCount == wordCount))
+			{
+				numMatches = numMatches + 1;
+			}
+			else
+			{
+				numMatches = 0;
+				break;
+			}
+		}
+
+		// can make the word if all of it's letters are in the input string
+		if (numMatches == len && strlen(dictionary[i]) > highestMatch){
+			highestMatch = strlen(dictionary[i]);
+		}
+		if (numMatches == len && strlen(dictionary[i]) == highestMatch) {
+				printf("%s\n", dictionary[i]);
+			}
+		
+		
+	}
+
+
+
+	return numMatches;
+}
+
+
+int countCharOccurence(char *string, char c)
+{
+	int i = 0, count = 0, len = 0;
+	len = strlen(string);
+	for (i = 0; i<len; i++)
+	{
+		if (string[i] == c) count++;
+	}
+	return count;
