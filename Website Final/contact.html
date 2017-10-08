@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset= "utf-8">
+<title>Andrice</title>
+<script type="text/javascript">
+	
+function validate()
+{
+var name= document.getElementById("name").value;
+var email= document.getElementById("email").value;
+var question= document.getElementById("question").value;
+
+var emailreg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+				if(name!=""&&email!=""&&question!="")
+				{
+				if(name.length >9)
+				{
+					if(email.match(emailreg)&&email.length>9)
+					{
+								if(question.length >24)
+								{
+									window.alert("Your query will be dealt with as soon as possible")
+								return true;
+								}
+								else
+								{
+								window.alert("Query must contain atleast 25 characters.")
+								return false;
+								}
+					}
+					else
+					{
+					window.alert("Enter a valid email.");
+					return false;
+					}
+				}
+				else
+				{
+				window.alert("Name must contain atleast 10 characters.")
+				return false;
+				}
+}
+else
+{
+window.alert("All fields are required.")
+return false;
+}
+}
+
+
+</script>
+</head>
+<body>
+<table border="0">
+<link rel="stylesheet" href="style.css">
+<tr>
+
+ <div  id="clockDisplay" class="clockStyle">
+ </div>
+ <script type="text/javascript" language="javascript">
+ function renderTime() {
+ var currentTime = new Date();
+ var AMPM = "AM";
+ var h = currentTime.getHours();
+ var m = currentTime.getMinutes();
+ var s = currentTime.getSeconds();
+ 
+ if (h==0)
+ {
+ h=12;
+ }
+else if (h>12)
+{
+h = h-12;
+AMPM = "PM";
+}
+ if (h < 10)
+ {
+ h = "0" + h;
+ }
+ if (m < 10)
+ {
+ m = "0" + m;
+ }
+ if (s < 10)
+ {
+ s = "0" + s;
+ }
+ var myClock = document.getElementById('clockDisplay');
+ myClock.textContent = h + ":" + m + ":" + s + " " + AMPM;
+ setTimeout('renderTime()',1000);
+ }
+ renderTime();
+ </script>
+ <td>
+ <img src="img" name="slide" class="slideshow" width="250" height="250">
+ <script type="text/javascript" language="javascript">
+ <!-->
+ var image1=new Image()
+ image1.src="farmer.jpg"
+ var image2=new Image()
+ image2.src="farmer2.jpg" 
+ var image3=new Image()
+ image3.src="panda.jpg"
+ //-->
+</script>
+
+<script type="text/javascript">
+<!-->
+var step=1
+function slideit(){
+document.images.slide.src=eval("image"+step+".src")
+if(step<3)
+step++
+else
+step=1
+setTimeout("slideit()",1000)
+}
+slideit();
+//-->
+</script>
+</td>
+
+ 
+   <td   valign="bottom" align="middle" colspan="3" height="400" width="1920">
+   <h1 class="maintitle">Andrice Variety rice shop</h1></td>
+   
+ 
+</tr>
+<tr>
+           <td valign="top" height="600" width="200">
+             		  <nav>
+					        <ul>
+					        <li><a href='index.html'>Home</a></li><br><br>
+					        <li><a href='about.html'>About us</a></li><br><br>
+					        <li><a href='contact.html'>Contact Information</a></li><br><br>
+					        <li><a href='offers.html'>Special Offers</a></li><br><br>
+					        <li><a href='links.html'>Useful links</a></li><br><br>
+						    </ul>
+							</nav>
+						
+			</td>
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   <td valign="top" height="600" width="700"> <h1>Contact Information</h1><br>
+		  
+<p>Address: 99th Flr., Some building., 999 some St., some city<br>
+Zipcode: 1229<br>
+City: Makati City<br>
+Country: Philippines<br>
+Tel: 999 9999999<br>
+Fax: 999 9999999<br>
+email: andrice@gmail.com<br><br>
+
+Fulfilment Executive<br>Name:		Andre Godinez<br>Tel:			089 999 9999<br>Email:		andregod@gmail.com<br><br>
+Marketing Officer<br>Name:		Andy Godinez<br>Tel:		089 999 9991<br>Email:		andygod@gmail.com<br><br>
+Secretary<br>Name:		Andrew godinez<br>Tel:		089 999 9992<br>Email:		andrewgod@gmail.com<br><br>
+</p>
+		
+		  <h1 style="color:red;	font-family: arial, sans-serif;">Have Questions?Send us an email.</h1>
+		  <h1 style="color:white;font-family: arial, sans-serif;font-size:25px;">Choose a topic</h1>
+		  
+		  <select name="topics">
+		  <optgroup>
+		
+		  <option value="general">General</h1></option>
+		  <option value="sales">Sales</h1></option>
+		  <option value="billing">Billing</h1></option>
+		  <option value="return">Return</h1></option>
+		  <option value="delivery">Delivery</h1></option>
+		  <optgroup>
+		</select><br><br>
+		  
+		  
+		  
+		  
+		  
+		  <form name="contact" onsubmit="validate()">
+		 
+		  
+		  
+		  
+		  <p style="color:white;font-family: arial, sans-serif;font-size:20px;">Name:<input type="text" name="name" id="name"/>
+		  Email address:<input type="text" name="email" id="email"/><br><br>Question:<br><textarea type="text" name="question" id="question" rows="20" cols="100"></textarea><br>
+		  <input type="submit" value="Submit"></p>
+		  
+		 
+		 </form>
+		   
+		   </td>
+		  <td valign="top" height="600" width= "200"> 
+		   <p>We deliver to the following countries.<br>
+		   Andorra <br>
+		   Austria<br>
+		   Belgium<br>
+		   Czech Republic<br>
+		   Denmark<br>
+		   Finland<br>
+		   France<br>
+		   Germany<br>
+		   Greece<br>
+		   Hungary<br>
+		   Ireland<br>
+		   Italy<br>
+		   Liechtenstein<br>
+		   Luxemburg<br>
+		   Monaco<br>
+		   Netherlands<br>
+		   Norway<br>
+		   Poland<br>
+		   Portugal<br>
+		   Spain<br>
+		   Sweden<br>
+		   United Kingdom <br>
+		   Vatican City<br>				
+		   Canada<br>
+		   U.S.<br>
+		   Hong Kong<br>
+		   Japan<br>
+		   Malaysia <br>
+		   Philippines<br>
+           Singapore<br>
+           South Korea<br>
+		   Taiwan</p><br>
+		   
+		   </td>
+</tr>
+<tr>
+      <td align="middle" colspan="3"  height="200" width="1920">
+	  <h1 class="bottomtitle">@Andrice variety rice shop | All rights reserved</h1>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  </td>
+</tr>
+</table>
+	
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

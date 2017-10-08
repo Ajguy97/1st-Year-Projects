@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Andrice</title>
+
+</head>
+<body>
+<table border="0">
+<link rel="stylesheet" href="style.css">
+<tr>
+
+ <div  id="clockDisplay" class="clockStyle">
+ </div>
+ <script type="text/javascript" language="javascript">
+ function renderTime() {
+ var currentTime = new Date();
+ var AMPM = "AM";
+ var h = currentTime.getHours();
+ var m = currentTime.getMinutes();
+ var s = currentTime.getSeconds();
+ 
+ if (h==0)
+ {
+ h=12;
+ }
+else if (h>12)
+{
+h = h-12;
+AMPM = "PM";
+}
+ if (h < 10)
+ {
+ h = "0" + h;
+ }
+ if (m < 10)
+ {
+ m = "0" + m;
+ }
+ if (s < 10)
+ {
+ s = "0" + s;
+ }
+ var myClock = document.getElementById('clockDisplay');
+ myClock.textContent = h + ":" + m + ":" + s + " " + AMPM;
+ setTimeout('renderTime()',1000);
+ }
+ renderTime();
+ </script>
+ <td>
+ <img src="img" name="slide" class="slideshow" width="250" height="250">
+ <script type="text/javascript" language="javascript">
+ <!-->
+ var image1=new Image()
+ image1.src="farmer.jpg"
+ var image2=new Image()
+ image2.src="farmer2.jpg" 
+ var image3=new Image()
+ image3.src="panda.jpg"
+ //-->
+</script>
+
+<script type="text/javascript">
+<!-->
+var step=1
+function slideit(){
+document.images.slide.src=eval("image"+step+".src")
+if(step<3)
+step++
+else
+step=1
+setTimeout("slideit()",1000)
+}
+slideit();
+//-->
+</script>
+</td>
+
+ 
+   <td   valign="bottom" align="middle" colspan="3" height="400" width="1920">
+   <h1 class="maintitle">Andrice Variety rice shop</h1></td>
+   
+ 
+</tr>
+<tr>
+           <td valign="top" height="600" width="200">
+             		  <nav>
+					       <ul>
+					        <li><a href='index.html'>Home</a></li><br><br>
+					        <li><a href='about.html'>About us</a></li><br><br>
+					        <li><a href='contact.html'>Contact Information</a></li><br><br>
+					        <li><a href='offers.html'>Special Offers</a></li><br><br>
+					        <li><a href='links.html'>Useful links</a></li><br><br>
+						    </ul>
+							</nav>
+						
+			</td>
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+			<td valign="top" height="600" width="700">
+		
+		 <h1 class="ricetitle"> Arborio rice </h1> <br>
+		   <div onmouseover="document.getElementById('div1').style.display = 'block';" onmouseout="document.getElementById('div1').style.display = 'none';" >
+		   <img src="arboriorice.jpg" alt="Arborio rice" width="350" height="300"> <br>
+							<div id="div1" style="display: none;"><p>Medium-grain, cultivated in northern Italy, creamy outside and firm inside. It's used mainly in risotto; similar to a California short-grain variety called pearl.</p></div></div><br>
+		 <p></p> <br>
+		 <a href="#">5 kg = 15 EURO</a> &nbsp;&nbsp;<a href="#">10 kg = 25 EURO</a> &nbsp; &nbsp;<a href="#">20 kg = 40 EURO</a> <br> <br>
+		 
+		 
+		 
+		 
+		 <h1 class="ricetitle">Basmati rice</h1> <br>
+		  <div onmouseover="document.getElementById('div2').style.display = 'block';" onmouseout="document.getElementById('div2').style.display = 'none';" >
+         <img src="basmati-rice.jpg" alt="Basmati rice" width="350" height="300"> <br>
+		<div id="div2" style="display: none;"><p>Its name means "queen of fragrance." Aromatic rice from India, Pakistan and Iran, it is known for its nutty aroma and taste.</p></div></div></div> <br>
+		 <a href="#">5 kg = 15 EURO</a> &nbsp;&nbsp;<a href="#">10 kg = 25 EURO</a> &nbsp; &nbsp;<a href="#">20 kg = 40 EURO</a> <br> <br>
+		 
+		 
+		 
+		 
+		 <h1 class="ricetitle">Black rice </h1><br>
+         <div onmouseover="document.getElementById('div3').style.display = 'block';" onmouseout="document.getElementById('div3').style.display = 'none';" >
+		 <img src="black rice.jpg" alt="Black rice" width="350" height="300"> <br>
+		<div id="div3" style="display: none;"><p>Rice grown in Indonesia and the Philippines, with a long black grain and nutty flavor. It's often used in puddings and cakes.</p></div></div><br>
+		 <a href="#">5 kg = 15 EURO</a> &nbsp;&nbsp;<a href="#">10 kg = 25 EURO</a> &nbsp; &nbsp;<a href="#">20 kg = 40 EURO</a> <br> <br>
+		
+		
+		
+		
+		<h1 class="ricetitle" >Brown rice</h1> <br>
+         <div onmouseover="document.getElementById('div4').style.display = 'block';" onmouseout="document.getElementById('div4').style.display = 'none';" >
+		 <img src="4.jpg" alt="Brown rice" width="350" height="300"> <br>
+		<div id="div4" style="display: none;"><p>Unmilled rice with hull removed. The rice comes in various shades of brown, red or black; available in short, medium or long grain.</p></div></div><br>
+		 <a href="#">5 kg = 15 EURO</a> &nbsp;&nbsp;<a href="#">10 kg = 25 EURO</a> &nbsp; &nbsp;<a href="#">20 kg = 40 EURO</a> <br> <br>
+		 
+		 
+		 
+		 
+		 <h1 class="ricetitle">Jasmine rice </h1><br>
+         <div onmouseover="document.getElementById('div5').style.display = 'block';" onmouseout="document.getElementById('div5').style.display = 'none';" >
+		 <img src="5.jpg" alt="Jasmine rice" width="350" height="300"> <br>
+		<div id="div5" style="display: none;"><p>Aromatic rice from Thailand. Thin, long grains produce soft, sticky rice.</p></div></div><br>
+		 <a href="#">5 kg = 15 EURO</a> &nbsp;&nbsp;<a href="#">10 kg = 25 EURO</a> &nbsp; &nbsp;<a href="#">20 kg = 40 EURO</a> <br> <br>
+		   </td>
+		   
+
+		   
+		   
+		   
+		   </td>
+		  
+
+
+
+
+
+
+
+
+		  <td valign="top" height="600" width= "200"> 
+		   <p>We deliver to the following countries.<br>
+		   Andorra <br>
+		   Austria<br>
+		   Belgium<br>
+		   Czech Republic<br>
+		   Denmark<br>
+		   Finland<br>
+		   France<br>
+		   Germany<br>
+		   Greece<br>
+		   Hungary<br>
+		   Ireland<br>
+		   Italy<br>
+		   Liechtenstein<br>
+		   Luxemburg<br>
+		   Monaco<br>
+		   Netherlands<br>
+		   Norway<br>
+		   Poland<br>
+		   Portugal<br>
+		   Spain<br>
+		   Sweden<br>
+		   United Kingdom <br>
+		   Vatican City<br>				
+		   Canada<br>
+		   U.S.<br>
+		   Hong Kong<br>
+		   Japan<br>
+		   Malaysia <br>
+		   Philippines<br>
+           Singapore<br>
+           South Korea<br>
+		   Taiwan</p><br>
+		   
+		   </td>
+</tr>
+<tr>
+      <td align="middle" colspan="3"  height="200" width="1920">
+	  <h1 class="bottomtitle">@Andrice variety rice shop | All rights reserved</h1>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  </td>
+</tr>
+</table>
+	
+   
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,113 @@
+.slideshow{
+	
+	position: relative;
+	left: 280px;
+	top:60px;
+}
+.clockStyle {
+	background-color:red;
+	border:yellow 2px inset;
+	padding:6px;
+	color:white;
+	font-family:"Arial Black",Gadget,sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	letter-spacing: 2px;
+	display:inline;
+	position: relative;
+    left: 30px;
+	top:350px;
+	
+	
+}
+html, body
+{
+  height: 100%;
+  width: 100%;
+}
+.maintitle
+{
+	font-family: Helvetica,arial, sans-serif;
+	color:red;
+	-webkit-text-stroke: 2px yellow;
+	font-size:70px;
+	text-transform: uppercase;
+	
+	
+}
+.bottomtitle
+{
+	font-family: Helvetica,arial, sans-serif;
+	color:yellow;
+	-webkit-text-stroke: 2px red;
+	font-size:60px;
+	text-transform: uppercase;
+}
+.ricetitle
+{
+	font-family: Helvetica,arial, sans-serif;
+	color:red;
+	-webkit-text-stroke: 1px white;
+	font-size:30px;
+	
+	
+}
+
+h2{
+	color:red;
+		font-family: arial, sans-serif;
+		
+		font-size:35px;
+	
+}
+
+ul{
+	list-style-type: none
+}
+li{
+	font-family: Arial, sans-serif;
+	font-size: 40px; 
+	color: red; 
+	text-decoration: bold;
+}
+li:hover{
+	font-family: Arial, sans-serif;
+	font-size: 40px; 
+	color: red; 
+	background-color:white;
+	text-decoration: bold;
+	
+}
+table{
+	background-color:black;
+	background-image:url('rice.png');
+	background-repeat:repeat-x;
+
+	
+}
+p{
+		color:white;
+		font-family: arial, sans-serif;
+		font-size:20px;
+	
+}
+h1{
+		
+		color:red;
+		font-family: arial, sans-serif;
+		
+		font-size:35px;
+		
+}
+nav{
+		color:red;
+		font-family: arial, sans-serif;
+		
+		font-size:30px
+	
+}
+a{
+	font-size:30px;
+	color: yellow;
+}
+
